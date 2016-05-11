@@ -197,7 +197,7 @@ class TextParserQCWY(object):
                     current_item_dict[u'起止时间'] = rows[0]
                     current_item_dict[u'公司名称'] = rows[1]
 
-                # 处理所属行业
+                # 处理所属行业(部分没有行业字段)
                 elif file_line.startswith(u'所属行业：'):
                     current_item_dict[u'所属行业'] = file_line.lstrip(u'所属行业： ')
                 # 处理最后工作描述的换行

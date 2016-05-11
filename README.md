@@ -12,6 +12,10 @@ Selenium Browser automation framework: [https://code.google.com/p/selenium/wiki/
 ChromeDriver - WebDriver for Chrome: [https://sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
 
+## ChromeDriver
+
+[http://chromedriver.storage.googleapis.com/index.html](http://chromedriver.storage.googleapis.com/index.html)
+
 ## 项目要点
 
 解析失败，页面链接和整个页面文件保存下来。
