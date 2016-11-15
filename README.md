@@ -17,7 +17,7 @@ ChromeDriver - WebDriver for Chrome: [https://sites.google.com/a/chromium.org/ch
 [http://chromedriver.storage.googleapis.com/index.html](http://chromedriver.storage.googleapis.com/index.html)
 
 
-## 
+## os、sys、platform 三个模块
 
 另外稍微区分一下 os、sys、platform 三个模块
 
@@ -51,14 +51,53 @@ sys.platform
 
 | 平台 | 值 |
 | --- | --- |
-| Linux (2.x and 3.x) | 'linux2' |
-| Windows | 'win32' |
-| Windows/Cygwin | 'cygwin' |
-| Mac OS X | 'darwin' |
-| OS/2 | 'os2' |
-| OS/2 EMX | 'os2emx' |
-| RiscOS | 'riscos' |
-| AtheOS | 'atheos' |
+| Linux (2.x and 3.x) | linux2 |
+| Windows | win32 |
+| Windows/Cygwin | cygwin |
+| Mac OS X | darwin |
+| OS/2 | os2 |
+| OS/2 EMX | os2emx |
+| RiscOS | riscos |
+| AtheOS | atheos |
+
+
+- Ubuntu 32bit
+```
+>>> import platform
+>>> platform.machine()
+'i686'
+>>> platform.system()
+'Linux'
+>>> import sys
+>>> sys.platform
+'linux2'
+```
+
+
+- Ubuntu 64bit
+```
+>>> import platform
+>>> platform.machine()
+'x86_64'
+>>> platform.system()
+'Linux'
+>>> import sys
+>>> sys.platform
+'linux2'
+```
+
+
+- Mac 64bit
+```
+>>> import platform
+>>> platform.machine()
+'x86_64'
+>>> platform.system()
+'Darwin'
+>>> import sys
+>>> sys.platform
+'darwin'
+```
 
 
 ## 项目要点
