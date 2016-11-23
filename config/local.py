@@ -13,6 +13,8 @@ import os
 
 CHROME_DRIVER_PATH = os.path.join(os.path.dirname(__file__), '../driver/chrome/mac64/chromedriver')
 
+PROXY = "http://127.0.0.1:3128"  # IP:PORT or HOST:PORT
+
 
 if __name__ == '__main__':
     print os.path.abspath(__file__)
