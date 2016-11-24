@@ -107,3 +107,23 @@ with self.assertRaises(SomeException) as cm:
 the_exception = cm.exception
 self.assertEqual(the_exception.error_code, 3)
 ```
+
+
+## 基本概念
+
+测试驱动开发（TDD：Test-Driven Development）
+
+
+## 测试单个测试用例
+```
+✗ cd src
+✗ python -m unittest tests.test_bar.BarTest.test_a
+```
+
+
+## 测试全部测试用例
+```
+✗ cd src
+✗ python -m unittest discover -s 'tests' -p 'test_bar.py'
+✗ python -m unittest discover -s 'tests' -p 'test_*.py'
+```
