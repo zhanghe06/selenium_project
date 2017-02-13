@@ -50,3 +50,8 @@ $ cutycapt --url=http://www.baidu.com --out=localfile.png
 ```
 $ xvfb-run -s "-screen 0 1024x768x24" cutycapt --url=http://www.baidu.com --out=localfile.png --body-string=utf-8
 ```
+
+## Docker 方案
+
+https://hub.docker.com/r/selenium/standalone-chrome/
+
