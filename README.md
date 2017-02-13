@@ -3,6 +3,9 @@
 $ pip install selenium
 
 
+## Selenium IDE
+
+
 ## Selenium with Python
 
 Selenium with Python: [http://selenium-python.readthedocs.org/](http://selenium-python.readthedocs.org/)
@@ -97,6 +100,68 @@ sys.platform
 >>> import sys
 >>> sys.platform
 'darwin'
+```
+
+- Win 32bit
+```
+>>> import platform
+>>> platform.machine()
+'x86'
+>>> platform.system()
+'Windows'
+>>> import sys
+>>> sys.platform
+'win32'
+```
+
+- Win 64bit
+```
+>>> import platform
+>>> platform.machine()
+'AMD64'
+>>> platform.system()
+'Windows'
+>>> import sys
+>>> sys.platform
+'win32'
+```
+
+
+## Using Selenium with remote WebDriver
+
+如果仅仅是本地测试/调试，可以使用本地驱动看到浏览器操作界面；
+
+生产环境往往不需要也没有桌面环境，这时就需要远程驱动配合Xvfb（虚拟图形服务）。
+
+http://seleniumhq.github.io/selenium/docs/api/py/#selenium-server-optional
+
+http://selenium-python.readthedocs.io/getting-started.html#using-selenium-with-remote-webdriver
+
+下载
+```
+wget -c http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.0.jar
+```
+
+Mac 环境依赖
+```
+brew install chromedriver
+brew doctor
+```
+
+启动服务
+```
+java -jar selenium-server-standalone-3.0.0.jar
+```
+
+调用服务
+```
+from selenium import webdriver
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
+driver = webdriver.Remote(
+    command_executor='http://127.0.0.1:4444/wd/hub',
+    desired_capabilities=DesiredCapabilities.CHROME
+)
 ```
 
 
