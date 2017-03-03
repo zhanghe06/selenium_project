@@ -59,6 +59,11 @@ if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(BarTest)
     result = unittest.TextTestRunner(verbosity=2).run(suite)
     # todo 邮件发送测试结果
+
+    print u'测试用例总数：', result.testsRun
+    print u'错误总数：', len(result.errors)
+    print u'失败总数：', len(result.failures)
+    print u'跳过总数：', len(result.skipped)
     for e in result.errors:
         print 'err:------'
         for t in e:
