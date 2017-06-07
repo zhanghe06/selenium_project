@@ -18,8 +18,8 @@ from config import CHROME_DRIVER_PATH
 
 test_link = 'http://www.baidu.com'
 
-display = Display(visible=False, size=(800, 600))
-# display = Display(visible=True, size=(800, 600))
+display = Display(visible=False, size=(800, 600))  # 依赖Xvfb
+# display = Display(visible=True, size=(800, 600))  # 依赖Xephyr
 display.start()
 
 # now Chrome will run in a virtual display.
